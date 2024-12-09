@@ -1,0 +1,51 @@
+/* Style for the new item form */
+.new-item.outer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.inner {
+    margin-bottom: 10px;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.right-section {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.category, .rank {
+    width: 120px; /* Fixed width for category and rank */
+}
+
+.notes {
+    width: 100%;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+/* For the responsiveness, ensure elements stack on smaller screens */
+@media (max-width: 768px) {
+    .new-item.outer {
+        flex-direction: column;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category, .rank {
+        width: 100%;
+    }
+}
